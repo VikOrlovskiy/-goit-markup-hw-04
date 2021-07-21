@@ -317,6 +317,8 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 .location {
   color: var(--title-wite);
@@ -338,7 +340,6 @@ img {
   color: var(--acent-color);
 }
 .footer-logo {
-  margin-bottom: 20px;
 }
 /*сторінка 2 портфоліо */
 /* фильтр  позиционирование*/
