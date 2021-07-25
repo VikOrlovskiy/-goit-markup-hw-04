@@ -3,7 +3,7 @@
 /* #FFFFFF колір тексту героя*/
 /* #2196F3 колір акценту */
 /* rgba(255, 255, 255, 0.6); колір в подвалі контактних даних */
-
+/* rgba(255, 255, 255, 0.1) колір фону на ссилке футера */
 /* rgba(255, 255, 255, 0.6) колір ссилок футера */
 /* #FFFFFF основний колір фону */
 /* #F5F4FA вторинний колір фону сторінки */
@@ -11,6 +11,7 @@
 /* #C4C4C4 колір підложки героя */
 /* #EEEEEE колір лінії карток порттфоліо */
 /* #ECECEC колір лінії хедера */
+/* #AFB1B8 колір иконки ссилок у спецов */
 /* 0px 4px 4px rgba(0, 0, 0, 0.15) тени на кнопку хедера */
 /* Roboto 400/500/700/900 основний шоифт */
 /* Raleway  700 додатковий шрифт*/
@@ -24,7 +25,9 @@
   --button-bgc: #f5f4fa;
   --footer-bgc: #2f303a;
   --heroes-bgc: #c4c4c4;
+  --footer-thumb-bgc: rgba(255, 255, 255, 0.1);
   --portfolio-card-bgc: #eeeeee;
+  --icon-social-color: #afb1b8;
   --header-line-color: #ececec;
   --futter-link-color: rgba(255, 255, 255, 0.6);
   --button-shadow-color: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -264,6 +267,7 @@ img {
   margin-left: 0px;
 }
 /* Наша команда оформление */
+
 .subtitle {
   line-height: 1.16;
   font-size: 36px;
@@ -293,9 +297,59 @@ img {
 }
 .card-text-specialist {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
+}
+/* социоальние иконки спецов */
+.specialist-icon {
+  fill: currentColor;
+}
+.social-specialist-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--icon-social-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.social-specialist-item:last-child {
+  margin-right: 0px;
+}
+.social-thumb {
+  color: var(--icon-social-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-specialist-item:hover {
+  background-color: rgb(47, 0, 156);
+}
+.social-specialist-item:hover .specialist-icon {
+  fill: var(--title-wite);
 }
 
+.social-specialist {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+.social-specialist-item {
+  display: flex;
+}
+/* new section */
+.client-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-thumb {
+  border-radius: 4px;
+  border: 1px solid rgb(47, 0, 156);
+}
+.client-icon {
+}
 /* позиционирование футер */
 .footer-padding {
   padding: 60px 15px;
@@ -342,10 +396,7 @@ img {
   color: var(--acent-color);
 }
 .footer-social {
-  display: block;
-  flex-direction: row;
-  margin-left: 70px;
-  align-items: center;
+  display: flex;
 }
 .social-list {
   display: flex;
