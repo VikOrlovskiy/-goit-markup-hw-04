@@ -129,6 +129,7 @@ img {
 .site-info .site-info-header {
   color: var(--primary-text-color);
   text-decoration: none;
+  cursor: pointer;
 }
 .site-info :hover,
 .site-info :focus {
@@ -145,7 +146,14 @@ img {
 .site-info.list .site-info-contact:first-child {
   margin-left: 0px;
 }
-
+.site-info-icon {
+  fill: var(--primary-text-color);
+  margin-right: 10px;
+}
+.site-info :hover .site-info-icon,
+.site-info :focus .site-info-icon {
+  fill: currentColor;
+}
 /* оформлення main */
 .section.without-padding {
   padding-top: 0px;
@@ -205,6 +213,7 @@ img {
 }
 /* оформлення основи */
 .section-title {
+  padding-top: 30px;
   color: var(--title-color);
 }
 /* позиціонування блоків сайту  */
@@ -229,9 +238,23 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - 90px);
+  display: flex;
+  flex-wrap: wrap;
 }
 .text-set .text-set-card:first-child {
   margin-left: 0px;
+}
+/*  */
+.icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 270px;
+  background-color: var(--button-bgc);
+}
+.text-set-icon {
+  display: flex;
 }
 /* Чем ми занимаемся позиционирование */
 .section.none {
@@ -304,6 +327,13 @@ img {
   fill: currentColor;
 }
 .social-specialist-item {
+  color: var(--icon-social-color);
+  margin-right: 10px;
+}
+.social-specialist-item:last-child {
+  margin-right: 0px;
+}
+.social-thumb {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -311,22 +341,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  margin-right: 10px;
 }
-.social-specialist-item:last-child {
-  margin-right: 0px;
+.social-thumb:hover {
+  background-color: var(--acent-color);
 }
-.social-thumb {
-  color: var(--icon-social-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.social-specialist-item:hover {
-  background-color: rgb(47, 0, 156);
-}
-.social-specialist-item:hover .specialist-icon {
+.social-thumb:hover .specialist-icon {
   fill: var(--title-wite);
 }
 
@@ -339,16 +358,33 @@ img {
 .social-specialist-item {
   display: flex;
 }
-/* new section */
+/* client section */
 .client-list {
   display: flex;
   justify-content: space-between;
 }
 .client-thumb {
+  display: flex;
+}
+.client-link {
+  width: 170px;
+  height: 92px;
   border-radius: 4px;
-  border: 1px solid rgb(47, 0, 156);
+  border: 1px solid var(--icon-social-color);
+  color: var(--icon-social-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .client-icon {
+  fill: currentColor;
+}
+.client-link:hover {
+  border-color: var(--acent-color);
+}
+.client-link:hover .client-icon {
+  fill: var(--acent-color);
 }
 /* позиционирование футер */
 .footer-padding {
@@ -395,11 +431,41 @@ img {
 .below-link :focus {
   color: var(--acent-color);
 }
-.footer-social {
-  display: flex;
-}
+
 .social-list {
   display: flex;
+}
+/* приеднуйтесь */
+.footer-social {
+  margin-left: 70px;
+}
+.add {
+  color: var(--title-wite);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.87;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.social-page {
+  display: flex;
+}
+.footer-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--title-wite);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-icon {
+  fill: currentColor;
+}
+.footer-thumb:hover {
+  background-color: var(--acent-color);
 }
 /*сторінка 2 портфоліо */
 /* фильтр  позиционирование*/
