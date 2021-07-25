@@ -252,6 +252,7 @@ img {
   height: 120px;
   width: 270px;
   background-color: var(--button-bgc);
+  border-radius: 4px;
 }
 .text-set-icon {
   display: flex;
